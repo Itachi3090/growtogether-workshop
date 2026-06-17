@@ -1,0 +1,262 @@
+.booking {
+    background: var(--cream);
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.booking-left {
+    padding-top: 8px;
+}
+
+.booking-left p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-top: 20px;
+}
+
+.booking-note {
+    margin-top: 36px;
+    padding: 20px 24px;
+    border-left: 2px solid var(--warm-brown);
+    background: rgba(155, 123, 82, 0.06);
+}
+
+.booking-note p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.7;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 16px;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-bottom: 1px solid var(--taupe);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.3s;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-bottom-color: var(--warm-brown);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-hint {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: var(--warm-brown);
+    width: 16px;
+    height: 16px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--warm-brown);
+    color: #fff;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: var(--deep-brown);
+}
+
+/* ── CONFIRMATION ── */
+.confirmation {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: var(--warm-white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.confirmation.show {
+    display: flex;
+}
+
+.conf-logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--warm-brown);
+    margin-bottom: 48px;
+    letter-spacing: 0.06em;
+}
+
+.conf-icon {
+    width: 72px;
+    height: 72px;
+    border: 1px solid var(--warm-brown);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 32px;
+    font-size: 1.5rem;
+    color: var(--warm-brown);
+}
+
+.conf-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.conf-sub {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 460px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+}
+
+.conf-divider {
+    width: 1px;
+    height: 60px;
+    background: var(--border);
+    margin: 0 auto 32px;
+}
+
+.conf-contact {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.conf-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.3s;
+}
+
+.conf-link:hover {
+    color: var(--warm-brown);
+}
+
+/* Common */
+section {
+    padding: 50px 60px;
+}
+
+.section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--warm-brown);
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.section-title em {
+    font-style: italic;
+    color: var(--warm-brown);
+}
+
+.section-body {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    font-weight: 300;
+}
+
+.divider {
+    width: 48px;
+    height: 1px;
+    background: var(--warm-brown);
+    margin: 28px 0;
+}
