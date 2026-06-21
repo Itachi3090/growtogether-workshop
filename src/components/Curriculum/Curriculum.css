@@ -24,8 +24,17 @@
     position: relative;
 }
 
+.curr-card {
+    transition:
+        background 0.3s,
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
 .curr-card:hover {
     background: var(--warm-brown);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .curr-card:hover .curr-icon,
@@ -57,4 +66,92 @@
     color: var(--text-secondary);
     line-height: 1.7;
     transition: color 0.3s;
+}
+
+/* Large laptops */
+@media (max-width: 1200px) {
+    .curriculum-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .curriculum {
+        padding: 100px 40px;
+    }
+
+    .curriculum-header {
+        margin-bottom: 60px;
+    }
+
+    .curriculum-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .curr-card {
+        padding: 36px 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .curriculum {
+        padding: 80px 24px;
+    }
+
+    .curriculum-header {
+        margin-bottom: 50px;
+    }
+
+    .curriculum-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 450px;
+    }
+
+    .curr-card {
+        padding: 32px 24px;
+        border-radius: 16px;
+    }
+
+    .curr-icon {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+    }
+
+    .curr-name {
+        font-size: 1.05rem;
+    }
+
+    .curr-desc {
+        font-size: 0.82rem;
+    }
+}
+
+
+/* Small phones */
+@media (max-width: 480px) {
+    .curriculum {
+        padding: 70px 16px;
+    }
+
+    .curr-card {
+        padding: 28px 20px;
+    }
+
+    .curr-icon {
+        font-size: 1.4rem;
+    }
+
+    .curr-name {
+        font-size: 1rem;
+    }
+
+    .curr-desc {
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
 }

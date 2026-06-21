@@ -3,6 +3,7 @@ import "./Navbar.css";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +26,14 @@ function Navbar() {
         Grow Together
       </a>
 
-      <ul className="nav-links">
+      <button
+        className="menu-btn"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
+
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
           <a href="#gallery">Gallery</a>
         </li>

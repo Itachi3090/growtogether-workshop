@@ -8,7 +8,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease,
+    padding 0.4s ease;
 }
 
 nav.scrolled {
@@ -36,6 +37,8 @@ nav.scrolled .nav-logo {
   display: flex;
   gap: 36px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -66,6 +69,7 @@ nav.scrolled .nav-links a {
   text-decoration: none;
   transition: all 0.3s;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 nav.scrolled .nav-cta {
@@ -79,3 +83,114 @@ nav.scrolled .nav-cta {
   border-color: var(--warm-brown);
 }
 
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+nav.scrolled .menu-btn {
+  color: var(--text-primary);
+}
+
+/* Large screens */
+@media (max-width: 1400px) {
+
+  nav,
+  nav.scrolled {
+    padding: 24px 40px;
+  }
+
+  .nav-links {
+    gap: 28px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  nav,
+  nav.scrolled {
+    padding: 20px 30px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-cta {
+    padding: 8px 18px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  nav,
+  nav.scrolled {
+    padding: 18px 20px;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-cta {
+    padding: 8px 16px;
+    font-size: 0.68rem;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(245, 240, 232, 0.98);
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 30px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobiles */
+@media (max-width: 480px) {
+
+  nav,
+  nav.scrolled {
+    padding: 16px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .nav-cta {
+    padding: 7px 12px;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+}

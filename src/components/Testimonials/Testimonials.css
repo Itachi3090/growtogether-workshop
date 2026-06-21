@@ -131,3 +131,155 @@
     letter-spacing: 2px;
     margin-bottom: 16px;
 }
+
+
+@media (max-width: 1100px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 750px;
+    }
+
+    .reviews-grid {
+        columns: 2;
+    }
+}
+
+@media (max-width: 992px) {
+  .testimonials {
+    padding: 100px 40px;
+  }
+
+  .test-header {
+    margin-bottom: 60px;
+  }
+
+  .video-grid {
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+
+  .reviews-grid {
+    columns: 2;
+    gap: 16px;
+  }
+
+  .review-card {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 80px 24px;
+  }
+
+  .test-header {
+    margin-bottom: 50px;
+  }
+
+  .video-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 380px;
+    margin: 0 auto 70px;
+  }
+
+  .video-card {
+    position: sticky;
+    top: 90px;
+
+    width: 100%;
+    aspect-ratio: 9/16;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.35);
+
+    margin-top: -120px;
+  }
+
+  .video-card:first-child {
+    margin-top: 0;
+  }
+
+  .video-card:nth-child(1) {
+    z-index: 1;
+  }
+
+  .video-card:nth-child(2) {
+    z-index: 2;
+  }
+
+  .video-card:nth-child(3) {
+    z-index: 3;
+  }
+
+  .reviews-grid {
+    columns: 1;
+  }
+
+  .review-card {
+    padding: 24px 20px;
+    margin-bottom: 16px;
+  }
+
+  .review-quote {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 70px 16px;
+  }
+
+  .video-card {
+    top: 80px;
+    border-radius: 16px;
+    margin-top: -90px;
+  }
+
+  .video-play {
+    width: 50px;
+    height: 50px;
+  }
+
+  .video-play::after {
+    border-left: 13px solid #fff;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  .video-info {
+    padding: 18px 16px;
+  }
+
+  .video-info .name {
+    font-size: 1rem;
+  }
+
+  .video-info .city {
+    font-size: 0.65rem;
+  }
+
+  .review-card {
+    padding: 20px 18px;
+  }
+
+  .review-quote {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .review-name {
+    font-size: 0.78rem;
+  }
+
+  .review-meta {
+    font-size: 0.68rem;
+  }
+}
+

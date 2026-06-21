@@ -40,10 +40,10 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="scroll-hint">
+      {/* <div className="scroll-hint">
         <div className="scroll-line"></div>
         <span>Scroll</span>
-      </div>
+      </div> */}
     </section>
   );
 }
