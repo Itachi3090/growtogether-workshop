@@ -63,21 +63,6 @@ function EditGallery() {
           image="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80"
           preset="Reception Preset"
         />
-
-        <BeforeAfterSlider
-          image="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?w=600&q=80"
-          preset="Indoor Ceremony Preset"
-        />
-
-        <BeforeAfterSlider
-          image="https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=600&q=80"
-          preset="Portrait Preset"
-        />
-
-        <BeforeAfterSlider
-          image="https://images.unsplash.com/photo-1548704806-0c6b45a8b7c6?w=600&q=80"
-          preset="Golden Hour Preset"
-        />
       </div>
     </section>
   );
